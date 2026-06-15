@@ -249,13 +249,11 @@ function plot_graph(weight_values, lbm_values, fat_values){
 
             plugins: {
                 legend: { 
-                    position: 'right',
-                    align: 'start'
+                    position: 'bottom',
                  },
                 labels: {
-                    boxWidth: 12,
-                    boxHeight: 12,  
-                    padding: 15,
+                    boxWidth: 20,
+                    padding: 20,
                     font: {
                         size: 11
                     }
