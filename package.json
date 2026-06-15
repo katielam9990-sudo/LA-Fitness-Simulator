@@ -1,0 +1,24 @@
+{
+  "name": "la-fitness-simulator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katielam9990-sudo/LA-Fitness-Simulator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/katielam9990-sudo/LA-Fitness-Simulator/issues"
+  },
+  "homepage": "https://github.com/katielam9990-sudo/LA-Fitness-Simulator#readme",
+  "dependencies": {
+    "chart.js": "^4.5.1"
+  }
+}
