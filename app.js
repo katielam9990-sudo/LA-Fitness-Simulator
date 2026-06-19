@@ -239,6 +239,8 @@ function plot_graph(weight_values, lbm_values, fat_values){
         options: {
             responsive: true,
 
+            aspectRatio: 1.2,
+
             layout: {
                 padding: {
                     top: 45,
@@ -268,6 +270,8 @@ function plot_graph(weight_values, lbm_values, fat_values){
                     // THE FIX: Tells the chart engine NOT to start at 0.
                     // It will automatically zoom in on your specific data range!
                     beginAtZero: false,
+                    min: Math.floor(Math.min(...weight_values, ...lbm_values, ...fat_values)) - 2, 
+                    max: Math.ceil(Math.max(...weight_values)) + 2,
                     grace: '5%' // Adds a tiny 5% visual cushion above and below your lines
                 }
              }
