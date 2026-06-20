@@ -16,8 +16,27 @@
         <label for="weightInput">Current Weight (kg):</label>
         <input type="number" id="weightInput" value="90"><br><br>
 
-        <label for="bodyFatInput">Estimated Body Fat (%):</label>
+        <label for="bodyFatInput" style="display: inline-flex; align-items: center; gap: 6px;">
+            Estimated Body Fat (%):
+            <div class="tooltip-container">
+                <span class="help-icon">?</span>
+                <div class="tooltip-box">
+                    <h4>Don't know your percentage?</h4>
+                    <p>Get a precise, medical-grade biometric scan for free at the LA Fitness Bartlett location upon 3-day pass sign up.</p>
+                    <a href="https://www.lafitness.com/Pages/freepass.aspx?clubID=1220" target="_blank" class="tooltip-cta">Book Your Free Scan & Appointment</a>
+                    
+                    <div class="divider">or estimate visually below</div>
+                    
+                    <div class="bf-chart-container">
+                        <img src="https://images.squarespace-cdn.com/content/v1/51cdfc97e4b0d13e9248b3b7/1474645528445-9KYPG9D2IGXUG3FAD7BP/image-asset.jpeg" alt="Body Fat Percentage Comparison Scale">
+                    </div>
+                </div>
+            </div>
+        </label>
         <input type="number" id="bodyFatInput" value="25"><br><br>
+
+        <!-- <label for="bodyFatInput">Estimated Body Fat (%):</label>
+        <input type="number" id="bodyFatInput" value="25"><br><br> -->
 
         <label for="activityInput">Activity Level:</label>
         <select id="activityInput">
@@ -58,7 +77,15 @@
 
         
                 <div id="phase-roadmap" style="background: #f8f9fa; padding: 10px; text-align: center; border-radius: 8px; margin: 10px 0; display: none;">
-                    <h4>📋 Your 12-Week Coaching Calorie Phases:</h4>
+                    <h4>Your 12-Week Calorie Phases:
+                        <div class="tooltip-container">
+                            <span class="help-icon">?</span>
+                            <div class="tooltip-box">
+                                <h4>What are caloric phases?</h4>
+                                    <p>Caloric phases are optional but optimal for gradual progress.</p>
+                            </div>
+                        </div>
+                    </h4>
                     <p>🥇 <strong>Phase 1 (Weeks 1-4):</strong> <span id="phase1Cal">--</span> kcal/day</p>
                     <p>🥈 <strong>Phase 2 (Weeks 5-8):</strong> <span id="phase2Cal">--</span> kcal/day</p>
                     <p>🥉 <strong>Phase 3 (Weeks 9-12):</strong> <span id="phase3Cal">--</span> kcal/day</p>

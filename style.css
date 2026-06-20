@@ -126,3 +126,121 @@ h1 {
 hr {
     display: none;
 }
+
+/* Tooltip Main Container */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Question Mark Circle */
+.help-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: #e2e8f0;
+    color: #475569;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.tooltip-container:hover .help-icon {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+/* Hidden Popover Box */
+.tooltip-box {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 340px; /* Slightly widened to showcase a combined chart better */
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    z-index: 100;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    text-align: left;
+}
+
+.tooltip-container:hover .tooltip-box {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.tooltip-box h4 {
+    margin: 0 0 6px 0;
+    color: #0f172a;
+    font-size: 14px;
+}
+
+.tooltip-box p {
+    margin: 0 0 12px 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.tooltip-cta {
+    display: block;
+    text-align: center;
+    background: #0284c7;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.tooltip-cta:hover {
+    background: #0369a1;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 14px 0;
+    color: #94a3b8;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.divider::before { margin-right: .5em; }
+.divider::after { margin-left: .5em; }
+
+/* Unified Image Viewport */
+.bf-chart-container {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    background: #f8fafc;
+}
+
+.bf-chart-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
